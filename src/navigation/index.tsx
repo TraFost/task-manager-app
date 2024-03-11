@@ -1,9 +1,14 @@
 import {NavigationContainer} from '@react-navigation/native';
+import {DefaultTheme} from '@react-navigation/native';
+import LoginNavigator from './login-navigator';
 
 export default function RootNavigator() {
+  const Theme = {};
+
   return (
-    <NavigationContainer>
-      <></>
+    <NavigationContainer theme={DefaultTheme}>
+      {/* <></> */}
+      <LoginNavigator />
     </NavigationContainer>
   );
 }

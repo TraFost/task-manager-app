@@ -12,4 +12,5 @@ export const NAVIGATION = {
   home: 'Home',
   profile: 'Profile',
   tasks: 'Tasks',
+  login: 'Login',
 };
