@@ -1,15 +1,19 @@
 import React from 'react';
-import {Text} from '@gluestack-ui/themed';
+import {SafeAreaView, ScrollView} from 'react-native';
+import {StyledComponent} from 'nativewind';
 
-import {SafeAreaView} from 'react-native';
-import {styled} from 'nativewind';
-
-const StyledSafeView = styled(SafeAreaView);
+import LoginTitle from './login-title';
+import LoginForm from './login-form';
 
 export default function LoginScreen() {
   return (
-    <StyledSafeView className="bg-red-500">
-      <Text>Login</Text>
-    </StyledSafeView>
+    <StyledComponent
+      component={SafeAreaView}
+      tw="bg-primary min-h-screen pt-20">
+      <StyledComponent component={ScrollView} tw="h-full">
+        <LoginTitle />
+        <LoginForm />
+      </StyledComponent>
+    </StyledComponent>
   );
 }
